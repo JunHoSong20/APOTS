@@ -5,7 +5,7 @@ This is an implementation of Adversarial Prediction of Traffic Speed (APOTS).
 
 # Datasets
 The processed datasets are available by a request mail:
-junonjuno@agape.hanyang.ac.kr
+junonjuno@bigdas.hanyang.ac.kr
 
 All datasets should be in './data'.
 
