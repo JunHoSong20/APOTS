@@ -1,17 +1,6 @@
-# -*- coding: utf-8 -*-
-'''
-----------------------------코드 설명----------------------------
--C-
-1.FC에 해당하는 코드로
-fc를 구현함
-----------------------------고려 사항----------------------------
-
-
-'''
 from module import *
 import os
 
-#FC를 구현
 def model(S, E, Y, BA, DR):
     layer = FC_model(S, E, BA, DR)
     cost_MAE = MAE(Y, layer)

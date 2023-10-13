@@ -1,38 +1,3 @@
-# -*- coding: utf-8 -*-
-'''
-----------------------------코드 설명----------------------------
--C-
-module 파일: 헤더 파일
-구성 요소
-각종 hyper parameter
-
-----------------------------고려 사항----------------------------
-*2019 07 05
-upStream_num, downStream_num은 데이터를 만들때 고려해서 실험 해줘야함
-그래서 mu, md 라는 변수를 만들긴 하지만 나중에 파일에서 읽어와야함
-*2019 07 20
-과연 lstm을 미리 preprocess하는것이 효과가 있을까 그냥 fully data에서 받아와서 사용하는것이 더 효율적이지 않을까
-input_data에서 안사용하는 데이터도 모두 받아와야하는데 이를 조건문으로 바꿔줄 필요가있다.
-*2019 07 21
-conv의 filter size와 layer등의 default값을 정해주어야 한다.
-각각의 module이 batch를 제대로 반영하고 있는지 확인해야함
-*2019 07 22
-66 -> 80? 바꿔야합니다
-tf.reduce_mean 이 이 실험에서 무슨 의미인가?
-
-Q. batch slice에서 +를 통해 data index에 접근하는데 이때 최대치를 넘어버릴 수 있다
-A. Cross validation 할때 Cell size만큼을 빼고 train_idx와 test_idx를 구해준다.
-
-*2019 07 23
-Q. conv에 뒤에 32채널을 1채널로 바꾸고 12개의 속도 데이터로 concat해주는 코드가 작성 되어야 한다.
-A. 해결했다
-
-Q. SPEED_MAX와 SPEED_MIN값 찾아야한다
-
-Q. conv 채널수 늘리기 정확도가 fc랑 비슷하면 안된다.
-
-'''
-
 import tensorflow as tf
 import numpy as np
 from sklearn.model_selection import KFold
